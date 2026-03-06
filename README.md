@@ -1,4 +1,7 @@
 # RemindMe - Sistema de Recordatorios por Email
+<img width="1893" height="846" alt="shooter1" src="https://github.com/user-attachments/assets/03956680-582f-47aa-899b-6fdd52b2b87b" />
+<img width="1910" height="879" alt="shooter2" src="https://github.com/user-attachments/assets/fdf4c92e-ccd6-4bdc-89a9-9bdd885d3ce0" />
+<img width="1897" height="839" alt="shooter3" src="https://github.com/user-attachments/assets/2caf0301-99e1-4886-a199-9f51de41914c" />
 
 ## Requisitos
 
