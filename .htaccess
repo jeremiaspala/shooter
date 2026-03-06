@@ -1,0 +1,44 @@
+# URL Amigables para Shooter
+RewriteEngine On
+RewriteBase /shooter/
+
+# Redirigir login.php a /login
+RewriteRule ^login/?$ login.php [L,QSA]
+
+# Redirigir logout.php a /logout
+RewriteRule ^logout/?$ logout.php [L,QSA]
+
+# Redirigir install.php a /install
+RewriteRule ^install/?$ install.php [L,QSA]
+
+# Dashboard
+RewriteRule ^$ index.php [L,QSA]
+RewriteRule ^dashboard/?$ index.php [L,QSA]
+
+# Recordatorios
+RewriteRule ^reminders/?$ index.php [L,QSA]
+RewriteRule ^reminders/create/?$ index.php [L,QSA]
+RewriteRule ^reminders/([0-9]+)/?$ index.php [L,QSA]
+RewriteRule ^reminders/([0-9]+)/edit/?$ index.php [L,QSA]
+RewriteRule ^reminders/([0-9]+)/delete/?$ index.php [L,QSA]
+
+# Usuarios
+RewriteRule ^users/?$ index.php [L,QSA]
+RewriteRule ^users/create/?$ index.php [L,QSA]
+RewriteRule ^users/([0-9]+)/edit/?$ index.php [L,QSA]
+RewriteRule ^users/([0-9]+)/delete/?$ index.php [L,QSA]
+
+# Configuración General
+RewriteRule ^settings/?$ index.php [L,QSA]
+
+# Configuración SMTP
+RewriteRule ^settings/smtp/?$ index.php [L,QSA]
+
+# Si no es archivo ni directorio, redirigir a index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+# Permitir acceso directo a archivos PHP en api/
+RewriteCond %{REQUEST_URI} ^/shooter/api/ [NC]
+RewriteRule ^ - [L]
